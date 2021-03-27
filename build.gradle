@@ -10,13 +10,19 @@ repositories {
 }
 
 dependencies {
-//    compile(group: "com.github.java-json-tools", name: "json-schema-validator", version: "2.2.14")
-    implementation "com.github.java-json-tools:json-schema-validator:2.2.14"
+    // https://mvnrepository.com/artifact/com.github.erosb/everit-json-schema
+    implementation group: 'com.github.erosb', name: 'everit-json-schema', version: '1.12.2'
+
+    // https://mvnrepository.com/artifact/info.picocli/picocli
+    implementation group: 'info.picocli', name: 'picocli', version: '4.6.1'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20210307'
+
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    implementation 'info.picocli:picocli:4.6.1'
-    annotationProcessor 'info.picocli:picocli-codegen:4.6.1'
 }
 //compileJava {
 //    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
