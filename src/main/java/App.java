@@ -19,13 +19,6 @@ public class App implements Runnable {
     private static File jsonFile;
 
     public void run() {
-//        if (jsonSchema.exists()){
-//            System.out.println(String.format("found jssonSChema file: %s", jsonSchema.getName()));
-//        }
-//        else {
-//
-//            System.out.println(String.format("did not find jssonSChema file: %s", jsonSchema.getName()));
-//        }
         try {
 
             try (FileInputStream fisSchema = new FileInputStream(jsonSchema); FileInputStream fisJson = new FileInputStream(jsonFile)) {
@@ -38,7 +31,7 @@ public class App implements Runnable {
 
         }
         catch (IOException err) {
-            System.out.println(String.format("did not find jssonSChema file: %s", jsonSchema.getName()));
+            System.out.println(String.format("did not process jsonSchema file: %s, because %s", jsonSchema.getName(), err));
         }
 
     }
